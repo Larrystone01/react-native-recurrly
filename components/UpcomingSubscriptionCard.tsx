@@ -1,6 +1,16 @@
 import { formatCurrency } from "@/lib/utils";
 import { Image, Text, View } from "react-native";
 
+/**
+ * Render a compact card showing an upcoming subscription's icon, formatted price, days-left label, and name.
+ *
+ * @param name - Subscription display name
+ * @param price - Numeric subscription price
+ * @param daysLeft - Days remaining until the next billing; when greater than 1 shows "`{n} days left`", otherwise shows "Last day"
+ * @param icon - Image source for the subscription icon
+ * @param currency - Currency code used by `formatCurrency` to format `price`
+ * @returns A React element representing the upcoming subscription card
+ */
 export default function UpcomingSubscriptionCard({
   name,
   price,

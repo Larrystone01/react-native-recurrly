@@ -19,6 +19,13 @@ import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 
 const SafeAreaView = styled(RNSafeAreaView);
 
+/**
+ * Home screen component that displays user info, formatted balance, an upcoming subscriptions carousel, and a vertical list of all subscriptions with expandable cards.
+ *
+ * The component tracks which subscription card is expanded in internal state and toggles expansion when a subscription is pressed.
+ *
+ * @returns A React element rendering the home screen layout and subscription lists
+ */
 export default function App() {
   const [expandedSubscriptionId, setExpandedSubscriptionId] = useState<
     string | null

@@ -6,6 +6,19 @@ import {
 import clsx from "clsx";
 import { Image, Pressable, Text, View } from "react-native";
 
+/**
+ * Renders a subscription summary card with an optional expanded details section.
+ *
+ * The header shows the icon, subscription name, formatted price, and billing cadence.
+ * When `expanded` is true the card reveals additional labeled details: payment method,
+ * category (falls back to plan), started date, renewal date, and status (falls back to "Unknown").
+ * When not expanded and `color` is provided the card uses it as the background color.
+ *
+ * @param expanded - If true, the card displays the expanded details section.
+ * @param onPress - Callback invoked when the card is pressed.
+ * @param color - Optional background color applied when the card is not expanded.
+ * @returns A React element representing the subscription card.
+ */
 export default function SubscriptionCard({
   name,
   price,
